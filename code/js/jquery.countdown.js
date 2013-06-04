@@ -12,6 +12,7 @@
 	var days	= 24*60*60,
 		hours	= 60*60,
 		minutes	= 60;
+                
 
 	// Creating the plugin
 	$.fn.countdown = function(prop){
@@ -45,7 +46,7 @@
 			// Number of hours left
 			h = Math.floor(left / hours);
 			updateDuo(2, 3, h);
-			left -= h*hours;
+			left -= h*hours + d*60*60*1000;
 
 			// Number of minutes left
 			m = Math.floor(left / minutes);

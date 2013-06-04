@@ -1,16 +1,4 @@
 /* zooming */
-
- .b-logo, .b-top_banner, .b-indicators_panel, .b-login_form, .b-login_form ul li
- {
-    *display: inline;
-    *zoom:1;
-}
-
-.b-date_in, .b-indicators_panel, .b-menu ul,.b-date_in, .b-date {
-	zoom:1;
-
-}
-
-.b-foot {
-	_width:980px;
+.offers-list {
+    zoom:1;
 }

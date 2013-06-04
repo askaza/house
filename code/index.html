@@ -2,307 +2,483 @@
 <html>
     <head>
 
-        <title>404</title>
+        <title>Домослав</title>
         <meta charset="utf-8" />
 
         <link type="image/x-icon" rel="icon" href="favicon.ico" />
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" media="screen" />
 
         <!--[if lt IE 8 ]>
                 <link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" />
         <![endif]-->
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-	<script type="text/javascript" src="js/jquery.countdown.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.countdown.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
 
     </head>
     <body>
-	<div class="page">
-	    <div class="header">
-		<h1 class="logo"><img src="images/logo.png" alt="Домослав" title="Домослав" class="logo__image" /></h1>
-		<h2 class="slogan">Строительство каркасных домов точно в срок</h2>
-		<div class="call">
-		    Есть вопросы? Звоните!
-		    <span class="phone-number">8 (812) 648-66-88</span>
-		</div>
-	    </div>
-	    <div class="main">
-		<div class="container">
-		    <ul class="promo-title">
-			<li class="promo-title__item">Ищете надёжного подрядчика для строительства дома?</li>
-			<li class="promo-title__item">Хотите избежать лишних расходов?</li>
-		    </ul>
-		    <div class="discount">
-			<div class="discount__text">
-			    <h3 class="discount-title">Акция!</h3>
-			    <span class="discount-dates">с 12 по 15 февраля</span>
-			    <p class="discount-text">
-				<span style="font-size:34px;line-height: 34px;">Запишитесь на</span><br />
-				<span style="font-size:44px;line-height: 44px;">бесплатную</span><br />
-				<span style="font-size:18px;line-height: 18px;">консультацию и узнайте как</span><br />
-				<span style="font-size:27px;font-style:italic;line-height: 27px;">сэкономить до 30%</span><br />
-				<span style="font-size:21px;line-height: 21px;">при строительстве дома!</span>
-			    </p>
-			    <div class="discount-countdown">
-				<span class="discount-countdown__title">До конца акции:</span>
+        <div class="page">
+            <div class="header">
+                <h1 class="logo"><img src="images/logo.png" alt="Домослав" title="Домослав" class="logo__image" /></h1>
+                <h2 class="slogan">Строительство каркасных домов точно в срок</h2>
+                <div class="call">
+                    Есть вопросы? Звоните!
+                    <span class="phone-number">8 (812) 648-66-88</span>
+                </div>
+            </div>
+            <div class="main">
+                <div class="container">
+                    <ul class="promo-title">
+                        <li class="promo-title__item">Ищете надёжного подрядчика для строительства дома?</li>
+                        <li class="promo-title__item">Хотите избежать лишних расходов?</li>
+                    </ul>
+                    <div class="discount">
+                        <div class="discount__text">
+                            <h3 class="discount-title">Акция!</h3>
+                            <span class="discount-dates">с <span id="startDate"></span> по <span id="endDate"></span></span>
+                            <p class="discount-text">
+                                <span style="font-size:34px;line-height: 34px;letter-spacing: -1px;">Запишитесь на</span><br />
+                                <span style="font-size:44px;line-height: 27px;letter-spacing: -2px;">бесплатную</span><br />
+                                <span style="font-size:18px;line-height: 24px;letter-spacing: normal;">консультацию и узнайте как</span><br />
+                                <span style="font-size:27px;font-style:italic;line-height: 27px;">сэкономить до 30%</span><br />
+                                <span style="font-size:21px;line-height: 21px;">при строительстве дома!</span>
+                            </p>
+                            <div class="discount-countdown">
+                                <span class="discount-countdown__title">До конца акции:</span>
 
-				<div id="countdown"></div>
+                                <div id="countdown"></div>
 
-			    </div>
-			</div>
-			<i class="label"></i>
-			<div class="discount__form">
-			    <form class="form" action="#" method="post">
-				<h3 class="form-title">
-				    Запишитесь на
-				    бесплатную
-				    консультацию
-				    сейчас:
-				</h3>
-				<ul class="fields-list">
-				    <li class="fields-list__item">
-					<input type="text" class="field" placeholder="ВАШЕ ИМЯ" />
-				    </li>
-				    <li class="fields-list__item">
-					<input type="text" class="field" placeholder="ВАШ ТЕЛЕФОН" />
-				    </li>
-				    <li class="fields-list__item">
-					<input type="submit" class="btn" value="Записаться" />
-				    </li>
-				</ul>
-			    </form>
-			</div>
-		    </div>
+                            </div>
+                        </div>
+                        <i class="label"></i>
+                        <div class="discount__form">
+                            <form class="form" action="#" method="post">
+                                <h3 class="form-title">
+                                    Запишитесь на
+                                    бесплатную
+                                    консультацию
+                                    сейчас:
+                                </h3>
+                                <ul class="fields-list">
+                                    <li class="fields-list__item">
+                                        <input type="text" class="field" value="ВАШЕ ИМЯ" onfocus="if (this.value == 'ВАШЕ ИМЯ') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'ВАШЕ ИМЯ';
+                                                }"/>
+                                    </li>
+                                    <li class="fields-list__item">
+                                        <input type="text" class="field" value="ВАШ ТЕЛЕФОН" onfocus="if (this.value == 'ВАШ ТЕЛЕФОН') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'ВАШ ТЕЛЕФОН';
+                                                }" />
+                                    </li>
+                                    <li class="fields-list__item">
+                                        <input type="submit" class="btn" value="Записаться" />
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
 
-		    <ul class="teasers">
-			<li class="teasers__item"><img src="images/teaser1.png" alt="6 лет на рынке" title="6 лет на рынке" /></li>
-			<li class="teasers__item"><img src="images/teaser2.png" alt="294 построенных дома" title="294 построенных дома" /></li>
-			<li class="teasers__item"><img src="images/teaser3.png" alt="100% гарантия качества" title="100% гарантия качества" /></li>
-		    </ul>
-		</div>
-		<div class="special-offers">
-		    <div class="container">
-			<h3 class="special-offers__title">спецпредложения</h3>
-			<div class="offers-list-wrapper">
-			    <ul class="offers-list">
-				<li class="offers-list__item">
-				    <div class="offer-head"><span class="offer-head__text">&laquo;Летний дом&raquo;</span></div>
-				    <img class="offer-image" src="images/offer1.png" alt="Летний дом" title="Летний дом"  width="290" height="222" />
-				    <span class="offer-title">Размеры: 6х7м, 70 кв.м</span>
-				    <h3 class="offer-title">Комплектация</h3>
-				    <ul class="complect-list">
-					<li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
-					<li class="complect-list__item">Каркас (сухой, антисептированный),</li>
-					<li class="complect-list__item">Утепление (базальтовые плиты, толщина 100 мм)</li>
-					<li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
-					<li class="complect-list__item">Окна (металлопластиковые),</li>
-					<li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
-					<li class="complect-list__item">Лестница (заводского заготовления),</li>
-					<li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
-					<li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
-				    </ul>
+                    <ul class="teasers">
+                        <li class="teasers__item"><img src="images/teaser1.png" alt="6 лет на рынке" title="6 лет на рынке" /></li>
+                        <li class="teasers__item"><img src="images/teaser2.png" alt="294 построенных дома" title="294 построенных дома" /></li>
+                        <li class="teasers__item"><img src="images/teaser3.png" alt="100% гарантия качества" title="100% гарантия качества" /></li>
+                    </ul>
+                </div>
+                <div class="special-offers"> <!-- .special-offers -->
+                    <div class="container">
+                        <h3 class="special-offers__title">спецпредложения</h3>
+                        <div class="offers-list-wrapper">
+                            <ul class="offers-list">
+                                <li class="offers-list__item">
+                                    <div class="offer-head"><span class="offer-head__text">&laquo;Летний дом&raquo;</span></div>
+                                    <img class="offer-image" src="images/offer1.png" alt="Летний дом" title="Летний дом"  width="290" height="222" />
+                                    <span class="offer-title">Размеры: 6х7м, 70 кв.м</span>
+                                    <h3 class="offer-title">Комплектация</h3>
+                                    <ul class="complect-list">
+                                        <li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
+                                        <li class="complect-list__item">Каркас (сухой, антисептированный),</li>
+                                        <li class="complect-list__item">Утепление (базальтовые плиты, толщина 100 мм)</li>
+                                        <li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
+                                        <li class="complect-list__item">Окна (металлопластиковые),</li>
+                                        <li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
+                                        <li class="complect-list__item">Лестница (заводского заготовления),</li>
+                                        <li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
+                                        <li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
+                                    </ul>
 
-				</li>
-				<li class="offers-list__item">
-				    <div class="offer-head"><span class="offer-head__text">&laquo;Зимний дом&raquo;</span></div>
-				    <img class="offer-image" src="images/offer2.png" alt="Зимний дом" title="Зимний дом"  width="290" height="222" />
-				    <span class="offer-title">Размеры: 6х9м, 90 кв.м</span>
-				    <h3 class="offer-title">Комплектация</h3>
-				    <ul class="complect-list">
-					<li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
-					<li class="complect-list__item">Каркас (сухой, антисептированный),</li>
-					<li class="complect-list__item">Утепление (базальтовые плиты, толщина 200 мм)</li>
-					<li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
-					<li class="complect-list__item">Окна (металлопластиковые),</li>
-					<li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
-					<li class="complect-list__item">Лестница (заводского заготовления),</li>
-					<li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
-					<li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
-				    </ul>
+                                </li>
+                                <li class="offers-list__item">
+                                    <div class="offer-head"><span class="offer-head__text">&laquo;Зимний дом&raquo;</span></div>
+                                    <img class="offer-image" src="images/offer2.png" alt="Зимний дом" title="Зимний дом"  width="290" height="222" />
+                                    <span class="offer-title">Размеры: 6х9м, 90 кв.м</span>
+                                    <h3 class="offer-title">Комплектация</h3>
+                                    <ul class="complect-list">
+                                        <li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
+                                        <li class="complect-list__item">Каркас (сухой, антисептированный),</li>
+                                        <li class="complect-list__item">Утепление (базальтовые плиты, толщина 200 мм)</li>
+                                        <li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
+                                        <li class="complect-list__item">Окна (металлопластиковые),</li>
+                                        <li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
+                                        <li class="complect-list__item">Лестница (заводского заготовления),</li>
+                                        <li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
+                                        <li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
+                                    </ul>
 
-				</li>
-				<li class="offers-list__item">
-				    <div class="offer-head"><span class="offer-head__text">&laquo;Зимний дом под ключ&raquo;</span></div>
-				    <img class="offer-image" src="images/offer3.png" alt="Зимний дом под ключ" title="Зимний дом под ключ"  width="290" height="222" />
-				    <span class="offer-title">Размеры: 6х9м, 108 кв.м</span>
-				    <h3 class="offer-title">Комплектация</h3>
-				    <ul class="complect-list">
-					<li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
-					<li class="complect-list__item">Каркас (сухой, антисептированный),</li>
-					<li class="complect-list__item">Утепление (базальтовые плиты, толщина 200 мм)</li>
-					<li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
-					<li class="complect-list__item">Окна (металлопластиковые),</li>
-					<li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
-					<li class="complect-list__item">Лестница (заводского заготовления),</li>
-					<li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
-					<li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
-					<li class="complect-list__item">Электросети и водосети</li>
-					<li class="complect-list__item">Локальная канализация на 3 куб.м</li>
-					<li class="complect-list__item">Отопление (газовый котёл)</li>
-				    </ul>
+                                </li>
+                                <li class="offers-list__item">
+                                    <div class="offer-head"><span class="offer-head__text">&laquo;Зимний дом под ключ&raquo;</span></div>
+                                    <img class="offer-image" src="images/offer3.png" alt="Зимний дом под ключ" title="Зимний дом под ключ"  width="290" height="222" />
+                                    <span class="offer-title">Размеры: 6х9м, 108 кв.м</span>
+                                    <h3 class="offer-title">Комплектация</h3>
+                                    <ul class="complect-list">
+                                        <li class="complect-list__item">Фундамент (свайный, с декоративной отделкой),</li>
+                                        <li class="complect-list__item">Каркас (сухой, антисептированный),</li>
+                                        <li class="complect-list__item">Утепление (базальтовые плиты, толщина 200 мм)</li>
+                                        <li class="complect-list__item">Кровля (металлочерепица + система водоотлива),</li>
+                                        <li class="complect-list__item">Окна (металлопластиковые),</li>
+                                        <li class="complect-list__item">Двери (заводские, с фурнитурой),</li>
+                                        <li class="complect-list__item">Лестница (заводского заготовления),</li>
+                                        <li class="complect-list__item">Наружная отделка (сайдинг, имитатор бревна/бруса),</li>
+                                        <li class="complect-list__item">Внутренняя отделка (вагонка, шпунт).</li>
+                                        <li class="complect-list__item">Электросети и водосети</li>
+                                        <li class="complect-list__item">Локальная канализация на 3 куб.м</li>
+                                        <li class="complect-list__item">Отопление (газовый котёл)</li>
+                                    </ul>
 
-				</li>
-			    </ul>
-			    <ul class="offers-list-bottom">
-				<li class="offers-list-bottom__item">
-				    <div class="offer-addition-info">
-					<div class="offer-price">
-					    <div class="price">Цена: <small class="price-old">1100 т.р.</small>
-						<h4 class="price-new">824 т.р.</h4>
-					    </div>
-					    <div class="discount-price">
-						Вы сэкономите:
-						<h5 class="money">276000 р.</h5>
-					    </div>
-					</div>
-					<div class="development-time">Срок строительства:30 дней</div>
-					<div class="garant">Гарантия:5 лет</div>
+                                </li>
+                            </ul>
+                            <ul class="offers-list-bottom">
+                                <li class="offers-list-bottom__item">
+                                    <div class="offer-addition-info">
+                                        <div class="offer-price">
+                                            <div class="price">Цена: <small class="price-old">1100 т.р.</small>
+                                                <h4 class="price-new">824 т.р.</h4>
+                                            </div>
+                                            <div class="discount-price">
+                                                Вы сэкономите:
+                                                <h5 class="money">276000 р.</h5>
+                                            </div>
+                                        </div>
+                                        <div class="development-time">Срок строительства:30 дней</div>
+                                        <div class="garant">Гарантия:5 лет</div>
 
-					<a href="#" class="btn-more">Узнать подробнее</a>
-				    </div>
-				</li>
-				<li class="offers-list-bottom__item">
-				    <div class="offer-addition-info">
-					<div class="offer-price">
-					    <div class="price">Цена: <small class="price-old">1580 т.р.</small>
-						<h4 class="price-new">1259 т.р.</h4>
-					    </div>
-					    <div class="discount-price">
-						Вы сэкономите:
-						<h5 class="money">321000 р.</h5>
-					    </div>
-					</div>
-					<div class="development-time">Срок строительства:45 дней</div>
-					<div class="garant">Гарантия:5 лет</div>
+                                        <a href="#popup-more" class="btn-more">Узнать подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="offers-list-bottom__item">
+                                    <div class="offer-addition-info">
+                                        <div class="offer-price">
+                                            <div class="price">Цена: <small class="price-old">1580 т.р.</small>
+                                                <h4 class="price-new">1259 т.р.</h4>
+                                            </div>
+                                            <div class="discount-price">
+                                                Вы сэкономите:
+                                                <h5 class="money">321000 р.</h5>
+                                            </div>
+                                        </div>
+                                        <div class="development-time">Срок строительства:45 дней</div>
+                                        <div class="garant">Гарантия:5 лет</div>
 
 
-					<a href="#" class="btn-more">Узнать подробнее</a>
-				    </div>
-				</li>
-				<li class="offers-list-bottom__item">
-				    <div class="offer-addition-info">
-					<div class="offer-price">
-					    <div class="price">Цена: <small class="price-old">2690 т.р.</small>
-						<h4 class="price-new">2268 т.р.</h4>
-					    </div>
-					    <div class="discount-price">
-						Вы сэкономите:
-						<h5 class="money">422000 р.</h5>
-					    </div>
-					</div>
-					<div class="development-time">Срок строительства:60 дней</div>
-					<div class="garant">Гарантия:5 лет</div>
+                                        <a href="#popup-more" class="btn-more">Узнать подробнее</a>
+                                    </div>
+                                </li>
+                                <li class="offers-list-bottom__item">
+                                    <div class="offer-addition-info">
+                                        <div class="offer-price">
+                                            <div class="price">Цена: <small class="price-old">2690 т.р.</small>
+                                                <h4 class="price-new">2268 т.р.</h4>
+                                            </div>
+                                            <div class="discount-price">
+                                                Вы сэкономите:
+                                                <h5 class="money">422000 р.</h5>
+                                            </div>
+                                        </div>
+                                        <div class="development-time">Срок строительства:60 дней</div>
+                                        <div class="garant">Гарантия:5 лет</div>
 
-					<a href="#" class="btn-more">Узнать подробнее</a>
-				    </div>
-				</li>
-			    </ul>
-			</div>
-			<div class="projects-banner">
-			    Более 150 проектов на выбор и возможность
-			    индивидуального проектирования!
-			</div>
-		    </div>
-		</div>
+                                        <a href="#popup-more" class="btn-more">Узнать подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="projects-banner">
+                            Более 150 проектов на выбор и возможность
+                            индивидуального проектирования!
+                        </div>
+                    </div>
+                </div>  <!-- ./special-offers -->
 
-		<div class="container">
-		    <div class="information">
-			<div class="problems">
-			    <h3 class="information__title">5 типичных проблем, с которыми
-				Вы можете столкнуться при
-				строительстве дома:
-			    </h3>
-			    <ul class="reasons-list">
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Исполнитель срывает сроки</h4>
-				    В результате создаётся куча проблем, лишние расходы времени и денег.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Высокая цена</h4>
-				    80% компаний – посредники и посредники посредников. Часто цены на работы и материалы завышены в несколько раз.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Никаких гарантий</h4>
-				    Если работы выполнены некачественно или есть недочёты, Вы можете это заметить только после сдачи объекта. Поэтому большинство строительных компаний и бригад не даёт никаких гарантий.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Некомпетентность</h4>
-				   Чтобы сэкономить деньги, строители используют дешёвые некачественные материалы, допускают грубые ошибки при проектировании дома, монтаже электрооборудования и т.д.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Мошенничество</h4>
-				    Делают неадекватно низкое по цене предложение. Берут предоплату 50% и исчезают.
-				</li>
-			    </ul>
-			</div>
-			<div class="reasons">
-			    <h3 class="information__title">5 типичных проблем, с которыми
-				Почему клиенты довольны
-				нашей работой и рекомендуют
-				нас своим друзьям:
+                <div class="container">
+                    <div class="information"> <!-- .information -->
+                        <div class="problems">
+                            <h3 class="information__title">5 типичных проблем, с которыми
+                                Вы можете столкнуться при
+                                строительстве дома:
+                            </h3>
+                            <ul class="reasons-list">
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Исполнитель срывает сроки</h4>
+                                    В результате создаётся куча проблем, лишние расходы времени и денег.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Высокая цена</h4>
+                                    80% компаний – посредники и посредники посредников. Часто цены на работы и материалы завышены в несколько раз.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Никаких гарантий</h4>
+                                    Если работы выполнены некачественно или есть недочёты, Вы можете это заметить только после сдачи объекта. Поэтому большинство строительных компаний и бригад не даёт никаких гарантий.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Некомпетентность</h4>
+                                    Чтобы сэкономить деньги, строители используют дешёвые некачественные материалы, допускают грубые ошибки при проектировании дома, монтаже электрооборудования и т.д.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Мошенничество</h4>
+                                    Делают неадекватно низкое по цене предложение. Берут предоплату 50% и исчезают.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reasons">
+                            <h3 class="information__title">
+                                Почему клиенты довольны
+                                нашей работой и рекомендуют
+                                нас своим друзьям:
 
-			    </h3>
-			    <ul class="reasons-list">
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">100% гарантия сроков </h4>
-				    Мы гарантируем выполнение работ в срок, потому что детально планируем каждый этап строительства и поставки материалов
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Гарантия качества</h4>
-				    Все дома строятся по технологии 3-х ступенчатого контроля качества. На все дома мы даём гарантию до 10 лет.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Лучшая цена </h4>
-				    Обращаясь к нам, Вы получаете качественно построенный дом по цене на 10-20% ниже рыночной. Потому что мы работаем напрямую с крупнейшими поставщиками материалов и оптимизируем свои расходы.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Безопасность </h4>
-				  Мы работаем строго по строительным нормам и ГОСТам и не экономим на материалах там, где этого делать нельзя. В наших домах Вам будет спокойно.
-				</li>
-				<li class="reasons-list__item">
-				    <h4 class="reason-name">Профессионализм</h4>
-				   Персонал компании составляют лучшие специалисты – профессиональные строители, архитекторы, конструктора, дизайнеры с опытом работы от 3-х лет. Мы работаем с лучшими материалами на современном оборудовании.
-				</li>
-			    </ul>
-			</div>
+                            </h3>
+                            <ul class="reasons-list">
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">100% гарантия сроков </h4>
+                                    Мы гарантируем выполнение работ в срок, потому что детально планируем каждый этап строительства и поставки материалов
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Гарантия качества</h4>
+                                    Все дома строятся по технологии 3-х ступенчатого контроля качества. На все дома мы даём гарантию до 10 лет.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Лучшая цена </h4>
+                                    Обращаясь к нам, Вы получаете качественно построенный дом по цене на 10-20% ниже рыночной. Потому что мы работаем напрямую с крупнейшими поставщиками материалов и оптимизируем свои расходы.
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Безопасность </h4>
+                                    Мы работаем строго по строительным нормам и ГОСТам и не экономим на материалах там,
+                                    где этого делать нельзя. В наших домах Вам будет спокойно.<br /><br />
+                                </li>
+                                <li class="reasons-list__item">
+                                    <h4 class="reason-name">Профессионализм</h4>
+                                    Персонал компании составляют лучшие специалисты – профессиональные строители, архитекторы, конструктора, дизайнеры с опытом работы от 3-х лет. Мы работаем с лучшими материалами на современном оборудовании.
+                                </li>
+                            </ul>
+                        </div>
 
-			<div class="comments">
-			    <h3 class="information__title">ОТЗЫВЫ КЛИЕНТОВ</h3>
-			    <ul class="comments-list">
-				<li class="comments-list__item">
-				    Для строительства дома из бруса выбрал ООО «Домослав». Дополнительно заказал внутреннюю отделку дома, гидроизоляцию санузлов и разводку коммуникаций водоснабжения и канализации. Все было сделано за два месяца. Впечатлил не только срок, но и отношение к клиентам.
-				    Квалифицированные консультации, доброжелательные и дельные советы сотрудников фирмы при подготовке договора, а потом и во время строительства помогли усовершенствовать проект и дизайн дома. Очень приятно и удивительно то, что удалось оптимизировать затраты на его возведение.
-				    Так что лично убедился, что в этой фирме заботятся не только о своей материальной выгоде. В итоге сбылась мечта – дом стоит и радует мою семью, за что всем превеликое спасибо.
-				    На следующий год планирую делать дополнительные работы по дому и на участке. Для себя решил – только в «Домослав»!
-				    <strong class="comments-author"> Головин Александр Олегович <br />25.08.2012</strong>
-				</li>
-				<li class="comments-list__item">
-				    Спасибо за терпение. Я очень привередливый заказчик и люблю чтобы всё было так как я хочу.
-				    Работала бригада Алексея Ник7олаева, с задачей ребята справились отлично.
-				    Строят быстро и качественно (брус). Дом стоит, всем спасибо.
-				    <strong class="comments-author">  Борисенко Николай <br />02.09.2011</strong>
-				</li>
-				<li class="comments-list__item">
-				    Ну вот и сбылась наша мечта!
-				    Мы купили земельный участок и построили на нем Дом! Можно сказать, что это Дом-Мечта!
-				    Помогли нам в этом ваши сотрудники.
-				    В первую очередь хотим выразить огромную благодарность нашему менеджеру проекта Николаю за то, что он помог нам определиться с выбором дома и за то, что все вопросы и мелкие проблемки решались всегда быстро и в нашу пользу))
-				    Также хотим поблагодарить нашего прораба Сергея Владимировича за то, что никогда не было задержек с поставкой материалов, и не было проблем с их качеством! Ну и конечно отдельная благодарность нашей бригаде строителей, которые не только в срок сделали свою работу, но и профессионально и качественно!
-				    <strong class="comments-author"> Евгений и Анастасия Доронины<br />01.10.2010</strong>
-				</li>
-			    </ul>
-			</div>
+                        <div class="comments">
+                            <h3 class="information__title">ОТЗЫВЫ КЛИЕНТОВ</h3>
+                            <ul class="comments-list">
+                                <li class="comments-list__item">
+                                    В апреле 2012 заказал строительство каркасного дома (тот самый который был по
+                                    спец цене) Нашел компанию через интернет, познакомился с директором Юрием, он вызвал доверие, сразу заключил договор и перевел предоплату на счет.
+                                    На сегодняшний день, когда все мы боимся оказаться обманутыми, кинутыми, переплатившими сотни тысяч рублей, приятно иметь дело 
+                                    с профессионалом, я был приятно удивлен (все рассказал, показал, на все мои "глупые" вопросы ответил, по мэйлу так же оперативно
+                                    получал всю необходимую информацию) Дом построен в срок, качество работ в целом оказалось лучше чем я ожидал. Спасибо еще раз!
+                                    <strong class="comments-author"> Максим Ключников
+                                        <br />23.09.2012</strong>
+                                </li>
+                                <li class="comments-list__item">
+                                    В июле 2012 г. мы с мужем приобрели участок 6 соток в Разметелево и сразу решили заняться строительством. Я обзвонила огромное количество разных строительных фирм, но все что-то было не то. Наконец, сначала поговорив по телефону, а после встретившись с Николаем Сергеевичем, решила остановиться на фирме с приятным названием «Домослав». Сразу поняла что сделала правильный выбор. Понравилось все: умение общаться с клиентами, профессионализм и 
+                                    техническая грамотность прораба, отношение к работе бригады рабочих. Учитывались любые мои пожелания, давались отличные советы, развёрнутые ответы на все мои вопросы, и все очень доброжелательно. Большое спасибо за все!
+                                    <strong class="comments-author">Буинцева Елена Вадимовна<br />08.01.2013</strong>
+                                </li>
+                                <li class="comments-list__item">
+                                    Ну вот и сбылась наша мечта!
+                                    Мы купили земельный участок и построили на нем Дом! Можно сказать, что это Дом-Мечта!
+                                    Помогли нам в этом ваши сотрудники.
+                                    В первую очередь хотим выразить огромную благодарность нашему менеджеру проекта Николаю за то, что он помог нам определиться с выбором дома и за то, что все вопросы и мелкие проблемки решались всегда быстро и в нашу пользу))
+                                    Также хотим поблагодарить нашего прораба Сергея Владимировича за то, что никогда не было задержек с поставкой материалов, и не было проблем с их качеством! Ну и конечно отдельная благодарность нашей бригаде строителей, которые не только в срок сделали свою работу, но и профессионально и качественно!
+                                    <strong class="comments-author"> Евгений и Анастасия Доронины<br />01.10.2010</strong>
+                                </li>
+                            </ul>
+                        </div>
 
-		    </div>
-		</div>
-	    </div>
-	</div>
+                    </div> <!-- /.information -->                    
+
+                </div>
+
+                <div class="work-with-us">
+                    <div class="container">
+                        <h2>Простая схема работы с нами</h2>
+
+                        <ul class="work-scheme">
+                            <li class="work-scheme__item">Заявка или <br />звонок</li>
+                            <li class="work-scheme__item">Бесплатная <br />консультация</li>
+                            <li class="work-scheme__item">Расчёт <br />сметы</li>
+                            <li class="work-scheme__item">Подготовка<br /> договора</li>
+                            <li class="work-scheme__item">Начало <br />работ</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="works">
+                    <div class="container">
+                        <h2>Примеры построенных домов</h2>
+                        <ul class="works-carousel" id="mycarousel">
+                            <li><a rel="gallery" href="images/works/1_b.jpg"><img src="images/works/1.jpg"/></a></li>
+                            <li><a rel="gallery" href="images/works/2_b.jpg"><img src="images/works/2.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/3_b.jpg"><img src="images/works/3.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/4_b.jpg"><img src="images/works/4.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/5_b.jpg"><img src="images/works/5.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/6_b.jpg"><img src="images/works/6.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/7_b.jpg"><img src="images/works/7.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/8_b.jpg"><img src="images/works/8.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/9_b.jpg"><img src="images/works/9.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/10_b.jpg"><img src="images/works/10.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/11_b.jpg"><img src="images/works/11.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/12_b.jpg"><img src="images/works/12.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/13_b.jpg"><img src="images/works/13.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/14_b.jpg"><img src="images/works/14.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/15_b.jpg"><img src="images/works/15.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/16_b.jpg"><img src="images/works/16.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/17_b.jpg"><img src="images/works/17.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/18_b.jpg"><img src="images/works/18.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/19_b.jpg"><img src="images/works/19.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/20_b.jpg"><img src="images/works/20.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/21_b.jpg"><img src="images/works/21.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/22_b.jpg"><img src="images/works/22.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/23_b.jpg"><img src="images/works/23.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/24_b.jpg"><img src="images/works/24.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/25_b.jpg"><img src="images/works/25.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/26_b.jpg"><img src="images/works/26.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/27_b.jpg"><img src="images/works/27.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/28_b.jpg"><img src="images/works/28.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/29_b.jpg"><img src="images/works/29.jpg" /></a></li>
+                            <li><a rel="gallery" href="images/works/30_b.jpg"><img src="images/works/30.jpg" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                <div class="bottom-form"> <!-- .bottom-form -->
+                    <div class="bottom-form-text">
+                        <h3 class="bottom-form__title">Работать с нами удобно</h3>
+                        <ul class="check-list">
+                            <li class="check-list__item"> Поэтапная оплата </li>
+                            <li class="check-list__item"> При заказе строительства проект дома в подарок </li>
+                            <li class="check-list__item"> Кредит и ипотека от 9% по 2 документам </li>
+                            <li class="check-list__item"> Принимаем материнский капитал </li>
+                            <li class="check-list__item"> Принимаем жилищные сертификаты  </li>                            
+                        </ul>
+                        
+                        <div class="call-us">
+                            Просто позвоните нам: 
+                            <div class="form-number">(812) 648-66-88</div>
+                            <span class="call-us-or">или</span>
+                        </div>
+                        
+                    </div>
+                    <form class="form" action="#" method="post">
+                        <h3 class="form-title">
+                            Запишитесь на
+                            бесплатную
+                            консультацию
+                            сейчас:
+                        </h3>
+                        <ul class="fields-list">
+                            <li class="fields-list__item">
+                                <input type="text" class="field" value="ВАШЕ ИМЯ" onfocus="if (this.value == 'ВАШЕ ИМЯ') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'ВАШЕ ИМЯ';
+                                                }"/>
+                            </li>
+                            <li class="fields-list__item">
+                                <input type="text" class="field" value="ВАШ ТЕЛЕФОН" onfocus="if (this.value == 'ВАШ ТЕЛЕФОН') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'ВАШ ТЕЛЕФОН';
+                                                }" />
+                            </li>
+                            <li class="fields-list__item">
+                                <input type="submit" class="btn" value="Записаться" />
+                            </li>
+                        </ul>
+                    </form>
+                </div> <!-- /.bottom-form -->
+                </div>
+                
+                <div class="partners">
+                    <div class="container">
+                    <h2>Наши партнеры</h2>
+                    <img src="images/partners1.jpg" />
+                    <br />
+                    <img src="images/partners2.jpg" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                
+                <div class="info-box">
+                    <h4 class="info-box__title">Контакты</h4>
+                    <p class="contacts-text">
+                        Телефон: 8 (812) 648-66-88 <br />
+                        mail@domoslav.ru <br />
+                        г. Санкт-Петербург, <br />
+                        ул. Исполкомская <br />
+                        д 9/11, офис 38
+                    </p>                    
+                </div>
+                <div class="info-box">
+                    <h4 class="info-box__title">Реквизиты</h4>
+                    <p class="contacts-text">
+                        ООО «ДОМОСЛАВ»<br />
+                        ИНН 7801572926 <br />
+                        ОГРН 1127847232160<br />
+                    </p>
+                </div>
+                <div class="map" style="width: 630px; height: 300px;">
+                   <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=XrewJ9dABkpDd-EX-1SFiemerepOo2Gr&width=600&height=300"></script>
+                </div>
+            </div>
+        </div>
+        
+        <div style="display: none;">
+            <div class="popup" id="popup-more" >            
+                <form id="f-contact-us">
+                    <fieldset>
+                        <legend>Оставьте заявку,  чтобы узнать<br /> подробности предложения</legend>
+
+                        <label><input data-val-def="Имя" value="Имя" id="name" name="name" onfocus="if (this.value == 'Имя') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'Имя';
+                                                }"></label>
+                        <label><input data-val-def="Телефон" value="Телефон" id="phone" name="phone" onfocus="if (this.value == 'Телефон') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'Телефон';
+                                                }"></label>
+                        <label><input data-val-def="E-mail" value="E-mail" id="email" name="email" onfocus="if (this.value == 'E-mail') {
+                                                    this.value = '';
+                                                }" onblur="if (this.value == '') {
+                                                    this.value = 'E-mail';
+                                                }"></label>
+
+                        <button class="popup-button"><span class="popup-button-text pfdd_reg">Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
 
 
     </body>
